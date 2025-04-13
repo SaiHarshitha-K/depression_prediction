@@ -32,7 +32,7 @@ This is a Flask-based web application that allows users to input a message and r
 
 ## ▶️ How to Run the App Locally
 
-### 1. Install dependencies
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
