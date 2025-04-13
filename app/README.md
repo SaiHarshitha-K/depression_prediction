@@ -32,17 +32,18 @@ This is a Flask-based web application that allows users to input a message and r
 
 ## ▶️ How to Run the App Locally
 
-### Install dependencies
+### 1. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 
 
-## Start the Flask server
+---
+### 2. Start the Flask server
 
 python app.py
 
-
-## Open your browser and go to
+---
+### 3. Open your browser and go to
 http://127.0.0.1:5000
 
