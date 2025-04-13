@@ -68,6 +68,12 @@ The final deployed model (XGBoost) is integrated into a **Flask app** where user
 - Paste input text
 - Get prediction: **Suicidal** or **Non-suicidal**
 
+- ![image](https://github.com/user-attachments/assets/ab757fcd-43bf-406d-adb8-d2a6b702874b)
+
+- ![Screenshot 2025-04-13 044125](https://github.com/user-attachments/assets/7a5b09d7-6d28-4755-9602-cc31124be397)
+
+
+
 ---
 
 ## ⚠️ Important Disclaimer
