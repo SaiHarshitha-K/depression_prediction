@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suicide Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d4edda;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 90%;
+            max-width: 700px;
+        }
+        h2 {
+            text-align: center;
+            color: #2f5d34;
+        }
+        textarea {
+            width: 100%;
+            height: 120px;
+            font-size: 16px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        input[type=submit] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2f5d34;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+        .disclaimer {
+            font-size: 13px;
+            color: #555;
+            margin-bottom: 15px;
+            background-color: #e2e3e5;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .text-snippet {
+            font-size: 15px;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🧠 Suicide Detection (XGBoost Model)</h2>
+
+        <div class="disclaimer">
+            ⚠️ <strong>Disclaimer:</strong> This tool is created strictly for educational purposes. It is not medically validated or suitable for real-world psychological diagnosis or intervention.
+        </div>
+
+        <form method="POST">
+            <label for="text">Enter your message:</label><br>
+            <textarea name="text" required></textarea><br>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if label %}
+        <div class="result">
+            <div class="text-snippet"><strong>Input:</strong>
+                {{ result_text[:100].rsplit(' ', 1)[0] }}{% if result_text|length > 100 %}...{% endif %}
+            </div>
+            <strong>Prediction:</strong> {{ label }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
